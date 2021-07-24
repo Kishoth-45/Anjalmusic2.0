@@ -70,9 +70,9 @@
       "required": true
     },
     "DURATION_LIMIT": {
-      "description": "Max audio duration limit for downloads (hours).",
+      "description": "Max audio duration limit for downloads (minutes).",
       "required": true,
-      "value": "5"
+      "value": "10"
     }
   }
 }
