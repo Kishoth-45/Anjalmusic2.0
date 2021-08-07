@@ -1293,8 +1293,7 @@ async def lol_cb(b, cb):
         await b.send_photo(chat_id,
             photo="final.png",
             reply_markup=keyboard,
-            caption="**🎵 Song:** {}\n**🕒 Duration:** {} min\n**👤 Added By:** {}\n\n**▶️ Now Playing at `{}`...** by 🍁ANJAL MUSIC🍀".format(
-            title, duration, message.from_user.mention(), message.chat.title
-        ), )
+            caption=f"▶️ <b>Playing</b> here the song requested by {r_by.mention} via ** 🍁Anjal Music☘️ **",
+        )
         
         os.remove("final.png")
