@@ -696,13 +696,13 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
                 [
                         InlineKeyboardButton(
-                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
-                            url=f"{url}"),
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒", 
+                            url=f"{dlurl}"),
                         InlineKeyboardButton(
                             text="𝐀𝐍𝐉𝐄𝐋🍃",
-                            url=f"https://t.me/Godofanjelsupport")
+                            url=f"https://t.me/Godofanjelsupport"),
 
-            ]
+               ]
             )
             requested_by = message.from_user.first_name
             await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -992,9 +992,10 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
        [
+                        
                         InlineKeyboardButton(
-                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
-                            url=f"{url}"),
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒", 
+                            url=f"{dlurl}"),
                         InlineKeyboardButton(
                             text="𝐀𝐍𝐉𝐄𝐋🍃",
                             url=f"https://t.me/Godofanjelsupport")
@@ -1129,9 +1130,10 @@ async def jiosaavn(client: Client, message_: Message):
         pass    
     keyboard = InlineKeyboardMarkup(
        [
+                       
                         InlineKeyboardButton(
-                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
-                            url=f"{url}"),
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒", 
+                            url=f"{dlurl}"),
                         InlineKeyboardButton(
                             text="𝐀𝐍𝐉𝐄𝐋🍃",
                             url=f"https://t.me/Godofanjelsupport")
@@ -1235,9 +1237,10 @@ async def lol_cb(b, cb):
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
        [
+                        
                         InlineKeyboardButton(
-                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
-                            url=f"{url}"),
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒", 
+                            url=f"{dlurl}"),
                         InlineKeyboardButton(
                             text="𝐀𝐍𝐉𝐄𝐋🍃",
                             url=f"https://t.me/Godofanjelsupport")
