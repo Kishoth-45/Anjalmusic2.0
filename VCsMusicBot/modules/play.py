@@ -457,7 +457,7 @@ async def play(_, message: Message):
     global useer
     if message.chat.id in DISABLED_GROUPS:
         return    
-    lel = await message.reply("💫 <b>Processing</b> Your Request! 💫")
+    lel = await message.reply("🧨<b>Processing</b>")
     administrators = await get_administrators(message.chat)
     chid = message.chat.id
 
@@ -604,15 +604,13 @@ async def play(_, message: Message):
         dlurl=dlurl.replace("youtube","youtubepp")
         keyboard = InlineKeyboardMarkup(
             [
-                [
-                    InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                    InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                ],
-                [
-                    InlineKeyboardButton(text="❌ Close", callback_data="cls"),
-                    InlineKeyboardButton(text="💫 Download 💫", url=f"{dlurl}"),
-                ],
-                [InlineKeyboardButton(text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport")],
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
             ]
         )
         requested_by = message.from_user.first_name
@@ -697,16 +695,14 @@ async def play(_, message: Message):
             dlurl=dlurl.replace("youtube","youtubepp")
             keyboard = InlineKeyboardMarkup(
                 [
-                    [
-                        InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                        InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-                    ],
-                    [
-                        InlineKeyboardButton(text="❌ Close", callback_data="cls"),
-                        InlineKeyboardButton(text="💫 Download 💫", url=f"{dlurl}"),
-                    ],
-                    [InlineKeyboardButton(text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport")],
-                ]
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
+            ]
             )
             requested_by = message.from_user.first_name
             await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -744,7 +740,7 @@ async def play(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via **@Anjalmusicbot**".format(
+            caption="▶️ <b>Playing</b> here the song requested by {} via **🍁Anjel Music☘️**".format(
                 message.from_user.mention()
             ),
         )
@@ -854,17 +850,15 @@ async def ytplay(_, message: Message):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [
-                InlineKeyboardButton(text="❌ Close", callback_data="cls"),
-                InlineKeyboardButton(text="💫 Download 💫", url=f"{dlurl}"),
-            ],
-            [InlineKeyboardButton(text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport")],
-        ]
+       [
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
+            ]
     )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
@@ -902,7 +896,7 @@ async def ytplay(_, message: Message):
         await message.reply_photo(
             photo="final.png",
             reply_markup=keyboard,
-            caption="▶️ <b>Playing</b> here the song requested by {} via **@AnjalmusicRobot**".format(
+            caption="▶️ <b>Playing</b> here the song requested by {} via **🍁Anjel Music☘️**".format(
                 message.from_user.mention()
             ),
         )
@@ -997,14 +991,15 @@ async def deezer(client: Client, message_: Message):
         pass    
     
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-            [InlineKeyboardButton(text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport")],
-        ]
+       [
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
+            ]
     )
     file_path = await convert(wget.download(url))
     await res.edit("Generating Thumbnail")
@@ -1133,18 +1128,15 @@ async def jiosaavn(client: Client, message_: Message):
     except:
         pass    
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [
-                InlineKeyboardButton(
-                    text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport"
-                )
-            ],
-            [InlineKeyboardButton(text="❌ Close", callback_data="cls")],
-        ]
+       [
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
+            ]
     )
     file_path = await convert(wget.download(slink))
     chat_id = get_chat_id(message_.chat)
@@ -1242,17 +1234,15 @@ async def lol_cb(b, cb):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
-        [
-            [
-                InlineKeyboardButton("📖 Playlist", callback_data="playlist"),
-                InlineKeyboardButton("Menu ⏯ ", callback_data="menu"),
-            ],
-            [
-                InlineKeyboardButton(text="❌ Close", callback_data="cls"),
-                InlineKeyboardButton(text="💫 Download 💫", url=f"{dlurl}"),
-            ],
-            [InlineKeyboardButton(text="🍂ANJEL SUPPORT🍃", url=f"https://t.me/Godofanjelsupport")],
-        ]
+       [
+                        InlineKeyboardButton(
+                            text="𝐘𝐨𝐮𝐭𝐮𝐛𝐞 🍒",
+                            url=f"{url}"),
+                        InlineKeyboardButton(
+                            text="𝐀𝐍𝐉𝐄𝐋🍃",
+                            url=f"https://t.me/Godofanjelsupport")
+
+            ]
     )
     requested_by = useer_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
