@@ -17,7 +17,7 @@ async def pmPermit(client: USER, message: Message):
                 return
             await USER.send_message(
                 message.chat.id,
-                "Hi there, This is a music assistant service of @Godofanjalbot.\n\n ❗️ Rules:\n   - No chatting allowed\n   - No spam allowed \n\n Problem contact @Godofanjalsupport",
+                "Hi there, This is a music assistant service of @Godofanjalbot.\n\n ❗️ Rules:\n   - No chatting allowed\n   - No spam allowed \n\n Problem contact @Godofanjelsupport",
             )
             return
 
